@@ -41,8 +41,8 @@ async def generate_itinerary(request_data: dict):
         model = genai.GenerativeModel("gemini-1.5-pro-latest")  
         response = model.generate_content(prompt)
 
-        if response and hasattr(response, "text"):
-            return {"itinerary": response.text}
+        if response and hasattr(response, "candidates"):
+            return {"itinerary": response.candidates[0].text}
         else:
             raise HTTPException(status_code=500, detail="Failed to generate itinerary.")
 
