@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-BACKEND_URL = "http://127.0.0.1:8000" 
+BACKEND_URL = "https://web-travel-29p1.onrender.com/" 
 
 #  Correct Enum Mapping
 budget_mapping = {
